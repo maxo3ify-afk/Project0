@@ -5,6 +5,13 @@ $primary-color: #11101d;
 $secondary-color: #1d1b31;
 $highlight-color: #fff;
 
+//Cuentan la leyenda que mixin tambien es herencia C:
+@mixin CSS($position,$height,$width){
+  position: $position;
+  width:$width;
+  height: $height;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,20 +27,16 @@ body {
 }
 
 .sidebar {
-  position: fixed;
+  @include CSS(fixed,100%,240px);
   top: 0;
   left: 0;
-  height: 100%;
-  width: 240px;
   background: $primary-color;
   padding: 6px 14px;
 
   .logo_content {
     .logo {
       color: $highlight-color;
-      display: flex;
-      height: 50px;
-      width: 100%;
+      @include CSS(flex,50px,100%);
       align-items: center;
 
       i {
@@ -49,13 +52,11 @@ body {
   }
 
   #btn {
-    position: absolute;
+    @include CSS(absolute,50px,50px);
     color: $highlight-color;
     left: 90%;
     top: 6px;
     font-size: 20px;
-    height: 50px;
-    width: 50px;
     text-align: center;
     line-height: 50px;
     transform: translateX(-50%);
@@ -64,21 +65,17 @@ body {
   ul {
     margin-top: 20px;
     li {
-      position: relative;
-      height: 50px;
-      width: 100%;
+      @include CSS (relative,50px,100%);
       margin: 0 5px;
       list-style: none;
       line-height: 50px;
 
       .tooltip {
-        position: absolute;
+        @include CSS(absolute,35px,122px);
         left: 122px;
         top: 50%;
         transform: translateY(-50%);
         border-radius: 6px;
-        height: 35px;
-        width: 122px;
         background: $highlight-color;
         line-height: 35px;
         text-align: center;
@@ -109,9 +106,7 @@ body {
       }
 
       input {
-        position: absolute;
-        height: 100%;
-        width: 100%;
+        @include CSS(absolute,100%,100%);
         left: 0;
         top: 0;
         border-radius: 12px;
