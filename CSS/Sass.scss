@@ -6,6 +6,11 @@ $sidebar-width-small: 60px;
 $primary-color: #11101d;
 $secondary-color: #1d1b31;
 $hover-color: #fff;
+@mixin CSS($position,$width,$height){
+    position: $position;
+    width: $width;
+    height: $height;
+}
 
 * {
     margin: 0;
@@ -22,11 +27,9 @@ body {
 }
 
 .sidebar {
-    position: fixed;
+    @include CSS(fixed,$sidebar-width,100%);
     top: 0;
     left: 0;
-    height: 100%;
-    width: $sidebar-width;
     background: $primary-color;
     padding: 6px 14px;
 
@@ -61,13 +64,11 @@ body {
 }
 
 .sidebar #btn {
-    position: absolute;
+    @include CSS(absolute,50px,50px);
     color: #fff;
     left: 90%;
     top: 6px;
     font-size: 20px;
-    height: 50px;
-    width: 50px;
     text-align: center;
     line-height: 50px;
     transform: translateX(-50%);
@@ -79,9 +80,8 @@ body {
 }
 
 .sidebar ul li {
+    @include CSS(relative,100%,50px);
     position: relative;
-    height: 50px;
-    width: 100%;
     margin: 0 5px;
     list-style: none;
     line-height: 50px;
@@ -93,13 +93,11 @@ body {
 }
 
 .sidebar ul li .tooltip {
-    position: absolute;
+    @include CSS(absolute,122px,35px);
     left: 122px;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 6px;
-    height: 35px;
-    width: 122px;
     background: #fff;
     line-height: 35px;
     text-align: center;
@@ -130,9 +128,7 @@ body {
 }
 
 .sidebar ul li input {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    @include CSS(absolute,100%,100%);
     left: 0;
     top: 0;
     border-radius: 12px;
@@ -224,11 +220,8 @@ body {
 }
 
 .home_content {
-    position: absolute;
-    height: 100px;
-    width: calc(100% - $sidebar-width);
+    @include CSS(absolute,calc(100% - $sidebar-width),100px);
     left: $sidebar-width;
-
     @media (max-width: 768px) {
         width: 100%;
         left: 0;
