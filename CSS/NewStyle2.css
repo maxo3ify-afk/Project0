@@ -34,6 +34,12 @@ body {
   .sidebar ul li .link_names {
     display: none;
   }
+  .sidebar-hidden {
+    position: absolute;
+    height: 100px;
+    left: 60px; /* Adjust the position to match the sidebar width */
+    transition: left 0.5s ease; /* Add a transition for smooth movement */
+  }
 }
 
 .sidebar .logo_content .logo {
@@ -221,16 +227,10 @@ body {
 
 .home_content {
   position: absolute;
-  width: calc(100% - 240px);
   height: 100px;
   left: 240px;
 }
-@media (max-width: 768px) {
-  .home_content {
-    width: 100%;
-    left: 0;
-  }
-}
+
 
 .home_content .text {
   font-size: 25px;

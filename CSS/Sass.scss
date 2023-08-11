@@ -6,7 +6,8 @@ $sidebar-width-small: 60px;
 $primary-color: #11101d;
 $secondary-color: #1d1b31;
 $hover-color: #fff;
-@mixin CSS($position,$width,$height){
+
+@mixin CSS($position, $width, $height) {
     position: $position;
     width: $width;
     height: $height;
@@ -27,7 +28,7 @@ body {
 }
 
 .sidebar {
-    @include CSS(fixed,$sidebar-width,100%);
+    @include CSS(fixed, $sidebar-width, 100%);
     top: 0;
     left: 0;
     background: $primary-color;
@@ -36,9 +37,11 @@ body {
     @media (max-width: 500px) {
         width: $sidebar-width-small;
         min-width: $sidebar-width-small;
-        #LogoName{
-            display:none;
+
+        #LogoName {
+            display: none;
         }
+
         ul li .link_names {
             display: none;
         }
@@ -64,7 +67,7 @@ body {
 }
 
 .sidebar #btn {
-    @include CSS(absolute,50px,50px);
+    @include CSS(absolute, 50px, 50px);
     color: #fff;
     left: 90%;
     top: 6px;
@@ -80,7 +83,7 @@ body {
 }
 
 .sidebar ul li {
-    @include CSS(relative,100%,50px);
+    @include CSS(relative, 100%, 50px);
     position: relative;
     margin: 0 5px;
     list-style: none;
@@ -93,7 +96,7 @@ body {
 }
 
 .sidebar ul li .tooltip {
-    @include CSS(absolute,122px,35px);
+    @include CSS(absolute, 122px, 35px);
     left: 122px;
     top: 50%;
     transform: translateY(-50%);
@@ -128,7 +131,7 @@ body {
 }
 
 .sidebar ul li input {
-    @include CSS(absolute,100%,100%);
+    @include CSS(absolute, 100%, 100%);
     left: 0;
     top: 0;
     border-radius: 12px;
@@ -220,11 +223,12 @@ body {
 }
 
 .home_content {
-    @include CSS(absolute,calc(100% - $sidebar-width),100px);
+    @include CSS(absolute, calc(100% - #{$sidebar-width}), 100px);
     left: $sidebar-width;
-    @media (max-width: 768px) {
+
+    @media (max-width: 500px) {
         width: 100%;
-        left: 0;
+        left: 60px;
     }
 }
 
@@ -233,4 +237,9 @@ body {
     font-weight: 500;
     color: $secondary-color;
     margin-top: 12px;
+}
+
+.home_content .center{
+    display: grid;
+    place-items: center;
 }
