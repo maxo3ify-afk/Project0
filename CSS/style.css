@@ -43,6 +43,9 @@ body {
   width: 100%;
   align-items: center;
 }
+.sidebar .logo_content .logo a:active {
+  text-decoration: none;
+}
 
 .logo_content .logo i {
   font-size: 28px;
@@ -244,4 +247,4 @@ body {
   place-items: center;
 }
 
-/*# sourceMappingURL=Style.css.map */
+/*# sourceMappingURL=style.css.map */

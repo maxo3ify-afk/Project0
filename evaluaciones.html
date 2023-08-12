@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./CSS/Style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bx-archive-in'></i>
+                <div class="logo_name" id="LogoName"><a href="./index.html"
+                        style="text-decoration: none; color: inherit;">Evaluaciones</a></div>
+            </div>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="./trabajadores.html">
+                    <i class='bx bx-user'></i>
+                    <span class="link_names">Trabajadores</span>
+                </a>
+                <!-- <span class="tooltip">Usuario</span> -->
+            </li>
+            <li>
+                <a href="./evaluaciones.html">
+                    <i class='bx bxs-duplicate'></i>
+                    <span class="link_names">Evaluaciones</span>
+                </a>
+                <!-- <span class="tooltip">Repuestos</span> -->
+            </li>
+            <li>
+                <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class='bx bx-log-in'></i>
+                    <span class="link_names">Log In</span>
+                </a>
+                <!-- <span class="tooltip">Log in</span> -->
+            </li>
+            <li>
+                <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    <i class='bx bx-registered'></i>
+                    <!-- <span class="link_names">Registrarse</span> -->
+                    <span class="link_names">Registrarse</span>
+                </a>
+                <!-- <span class="tooltip">Registrarse</span> -->
+            </li>
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="https://ondalocal.com.ni/media/articles/daniel-ortega-nombra-nueva-director-telcor-nicaragua_qet5vlr.jpg"
+                        alt="">
+                    <div class="name_job">
+                        <div class="name">Telcor</div>
+                        <div class="job">Ente Regulador</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' id="log_out"></i>
+            </div>
+        </div>
+    </div>
+    <div class="home_content">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Maxwell Madrigal</td>
+                    <td><a data-bs-toggle="modal" data-bs-target="#exampleModal2">Evaluar</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Hamlet</td>
+                    <td><a data-bs-toggle="modal" data-bs-target="#exampleModal2">Evaluar</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Arturo</td>
+                    <td><a data-bs-toggle="modal" data-bs-target="#exampleModal2">Evaluar</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar Session</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="recipient-name" class="col-form-label">Correo:</label>
+                    <input type="text" class="form-control" placeholder="correo@correo.com">
+                    <label for="recipient-name" class="col-form-label">Contraseña:</label>
+                    <input type="password" class="form-control" placeholder="contraseña">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Iniciar Session</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="recipient-name" class="col-form-label">Correo:</label>
+                    <input type="text" class="form-control" placeholder="correo@correo.com">
+                    <label for="recipient-name" class="col-form-label">contraseña:</label>
+                    <input type="password" class="form-control" placeholder="contraseña">
+                    <label for="recipient-name" class="col-form-label">Repetir contraseña:</label>
+                    <input type="password" class="form-control" placeholder="contraseña">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Iniciar Session</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Te la kreiste wee</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./IMG/RataPeq.jpg" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

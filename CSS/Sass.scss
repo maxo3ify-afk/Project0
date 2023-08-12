@@ -54,6 +54,9 @@ body {
     height: 50px;
     width: 100%;
     align-items: center;
+    a:link, a:visited, a:active {
+        text-decoration:none;
+    }
 }
 
 .logo_content .logo i {
